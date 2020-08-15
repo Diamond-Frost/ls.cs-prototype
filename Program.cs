@@ -55,8 +55,9 @@ namespace ls.cs
 
 
             //using home dir for debugging 
-            string cwd = "C:\\Users\\Username";//Directory.GetCurrentDirectory();
-            string[] files = Directory.GetFileSystemEntries(cwd);
+            string wd = "C:\\Users\\Username";
+            string cwd = Directory.GetCurrentDirectory();
+            string[] files = Directory.GetFileSystemEntries(wd);
 
             Options opt = Options.parse(Globals.testArgs);
             List<lsFileInfo> infos = new List<lsFileInfo>();
